@@ -37,10 +37,25 @@ cacheSolve <- function(x, ...) {
 
 
 ## Function testing
-source("ProgrammingAssignment2/cachematrix.R")
-my_matrix <- makeCacheMatrix(matrix(5:8, 2, 2))
+
+source("ProgrammingAssignment2-master/cachematrix.R") 
+
+my_matrix <- makeCacheMatrix(matrix(5:8, 2, 2)) my_matrix$get()
+
+my_matrix$getInverse()
+
+cacheSolve(my_matrix)
+
+my_matrix$getInverse()
+
+my_matrix$set(matrix(c(5, 8, 10, 15), 2, 2))
+
 my_matrix$get()
 
 my_matrix$getInverse()
 
 cacheSolve(my_matrix)
+
+cacheSolve(my_matrix)
+
+my_matrix$getInverse()
